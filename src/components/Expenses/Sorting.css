@@ -1,0 +1,24 @@
+.sorting-filter {
+    color: white;
+    padding: 0 1rem;
+}
+
+.sorting-filter__control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.sorting-filter label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.sorting-filter select {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+}

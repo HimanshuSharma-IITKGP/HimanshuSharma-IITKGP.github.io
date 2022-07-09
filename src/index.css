@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Edu QLD Beginner', cursive;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
