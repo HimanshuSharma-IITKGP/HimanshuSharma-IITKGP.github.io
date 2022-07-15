@@ -1,10 +1,10 @@
-import './ExpensesList.css'
+import classes from  '../css/ExpensesList.module.css'
 import ExpenseItem from './ExpenseItem'
 
 const ExpensesList = (props) => {
 
     if (props.filteredList.length === 0) {
-        return <h2 className='expenses-list__fallback'>Found No Expenses</h2>
+        return <h2 className={classes['expenses-list__fallback']}>Found No Expenses</h2>
     }
 
     // console.log(props.order)
@@ -29,13 +29,13 @@ const ExpensesList = (props) => {
 
     else if(props.sortMode === 'Date'){
         // console.log('date')
-        if(props.order === 'N2O'){
+        if(props.order === 'O2N'){
             // console.log('Date Increasing')
             props.filteredList.sort((a, b)=>{
                 return a.date.getTime() - b.date.getTime();
             })
         }
-        else if(props.order === 'O2N'){
+        else if(props.order === 'N2O'){
             // console.log('Date Decreasing')
             props.filteredList.sort((a, b)=>{
                 return b.date.getTime() - a.date.getTime(); //decreasing order of date
@@ -51,6 +51,7 @@ const ExpensesList = (props) => {
             title={ex.title}
             amount={ex.amount}
             date={ex.date}
+            tag={ex.tag}
             onDelete={props.onDelete}
             id={ex.id}
             key={ex.id}
@@ -58,7 +59,7 @@ const ExpensesList = (props) => {
     })
 
     return (
-        <ul className='expenses-list'>
+        <ul className={classes['expenses-list']}>
             {
                 sortedDomExpensesList
             }

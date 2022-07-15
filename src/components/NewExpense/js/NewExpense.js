@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './NewExpense.css'
+import classes from '../css/NewExpense.module.css'
 import ExpenseForm from './ExpenseForm'
 
 const NewExpense = (props) => {
@@ -17,15 +17,15 @@ const NewExpense = (props) => {
 
     if (state === "show") {
         return (
-            <div className="new-expense">
-                <ExpenseForm onSaveExpenseData={props.onAddExpense} toggleState={toggleState} />
+            <div className={classes['new-expense']}>
+                <ExpenseForm onSaveExpenseData={props.onAddExpense} toggleState={toggleState} tagList={props.tagList}/>
             </div>
         )
     }
 
     else if (state === 'hide') {
         return (
-            <div className="new-expense">
+            <div className={classes['new-expense']}>
                 <button onClick={toggleState}>Add New Expense</button>
             </div>
         )

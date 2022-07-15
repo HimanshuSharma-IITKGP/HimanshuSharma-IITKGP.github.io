@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sorting.css';
+import classes from  '../css/Sorting.module.css';
 
 const Sorting = (props) => {
 
@@ -16,8 +16,8 @@ const Sorting = (props) => {
     }
 
     return (
-        <div className='sorting-filter'>
-            <div className='sorting-filter__control'>
+        <div className={classes['sorting-filter']}>
+            <div className={classes['sorting-filter__control']}>
                 <label>SORT BY</label>
                 <select  onChange={sortHandler} value={props.sortMode}>
                     <option value='Amount'>Amount</option>

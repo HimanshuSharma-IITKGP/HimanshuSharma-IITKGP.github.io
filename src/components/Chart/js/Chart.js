@@ -1,6 +1,6 @@
 
 import ChartBar from './ChartBar'
-import './Chart.css';
+import classes from '../css/Chart.module.css';
 
 const Chart = (props) => {
 
@@ -18,7 +18,7 @@ const Chart = (props) => {
     })
 
     return (
-        <div className="chart">
+        <div className={classes.chart}>
             {chartBars}
         </div>
     )

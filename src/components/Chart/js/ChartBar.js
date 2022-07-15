@@ -1,5 +1,5 @@
 
-import './ChartBar.css';
+import classes from '../css/ChartBar.module.css';
 
 const ChartBar = (props) =>{
 
@@ -14,11 +14,11 @@ const ChartBar = (props) =>{
     }
 
     return (
-        <div className='chart-bar' >
-            <div className="chart-bar__inner">
-                <div className="chart-bar__fill" style={barStyle} ></div>
+        <div className={classes['chart-bar']} >
+            <div className={classes['chart-bar__inner']}>
+                <div className={classes['chart-bar__fill']} style={barStyle} ></div>
             </div>
-            <div className="chart-bar__label">
+            <div className={classes['chart-bar__label']}>
                 <div>{props.label.month}</div>
                 <div>{props.label.value}</div>
             </div>
